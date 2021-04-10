@@ -18,6 +18,9 @@ public class Staff {
 
     public double getAverage() {
         double sum = 0.0;
+        if (persons.size() == 0) {
+            return sum;
+        }
         for(Measurable person : persons) {
             sum += person.getMeasure();
         }
