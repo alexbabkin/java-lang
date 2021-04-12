@@ -1,18 +1,19 @@
 package com.mycompany.app;
 
-import com.mycompany.measurable.Measurable;
-import com.mycompany.measurable.impl.Employee;
-import com.mycompany.staff.Staff;
-import com.mycompany.intsequence.IntSequence;
-import com.mycompany.sorter.Sorter;
+import com.mycompany.runnablecombiner.RunnableCombiner;
+import java.lang.Runnable;
 
 public class App 
 {
-    public static void main( String[] args )
-    {
-        IntSequence seq = IntSequence.of(1, 2, 3, 4, 5);
-        while(seq.hasNext()) {
-            System.out.println(seq.next());
-        }
+    public static void main( String[] args ) {
+        Runnable [] runnables = {
+            () -> System.out.println("Runnable 1"),
+            () -> System.out.println("Runnable 2"),
+            () -> System.out.println("Runnable 3"),
+            () -> System.out.println("Runnable 4"),
+            () -> System.out.println("Runnable 5"),
+        };
+        Runnable result = RunnableCombiner.combine(runnables);
+        result.run();
     }
 }
