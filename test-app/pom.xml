@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  
+
   <parent>
     <artifactId>java-lang</artifactId>
     <groupId>com.mycompany.javalang</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mycompany.javalang.interfacesandlambdas</groupId>
-  <artifactId>interfaces-and-lambdas</artifactId>
+  <groupId>com.mycompany.javalang.testap</groupId>
+  <artifactId>test-app</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
-  <name>interfaces-and-lambdas</name>
+  <name>test-app</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -41,7 +44,7 @@
                 <archive>
                     <manifest>
                     <addClasspath>true</addClasspath>
-                        <mainClass>com.mycompany.javalang.interfacesandlambdas.App</mainClass>
+                        <mainClass>com.mycompany.javalang.testapp.App</mainClass>
                     </manifest>
                 </archive>
             </configuration>
