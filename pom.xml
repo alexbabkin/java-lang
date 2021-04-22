@@ -6,16 +6,22 @@
   <artifactId>java-lang</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
+    
   <name>java-lang</name>
-
+    
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+    
   <!-- FIXME change it to the project's website -->
-
+    
   <url>http://www.example.com</url>
-
   <modules>
     <module>test-app</module>
     <module>interfaces-and-lambdas</module>
     <module>classes-and-reflection</module>
   </modules>
-
+  
 </project>
