@@ -1,4 +1,4 @@
-package om.mycompany.javalang.interfacesandlambdas.sorter;
+package com.mycompany.javalang.interfacesandlambdas.sorter;
 
 import java.util.ArrayList;
 
