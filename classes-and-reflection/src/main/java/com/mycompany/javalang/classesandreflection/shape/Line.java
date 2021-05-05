@@ -48,12 +48,12 @@ public class Line extends Shape implements Cloneable {
     public boolean equals(Object other) {
         if (!super.equals(other)) return false;
         Line otherLine = (Line)other;
-        return Objects.equals(from, to);
+        return Objects.equals(from, otherLine.from) && Objects.equals(to, otherLine.to);
     }
 
     @Override
     public String toString() {
-        return super.toString() + " from: " + from.toString() + " to " + to.toString();
+        return super.toString() + " from: " + from.toString() + "; to " + to.toString();
     }
 
     @Override

@@ -1,4 +1,4 @@
-package om.mycompany.javalang.interfacesandlambdas.intsequence;
+package com.mycompany.javalang.interfacesandlambdas.intsequence;
 
 public interface IntSequence {
     boolean hasNext();

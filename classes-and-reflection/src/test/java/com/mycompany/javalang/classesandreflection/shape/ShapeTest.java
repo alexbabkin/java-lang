@@ -53,6 +53,7 @@ public class ShapeTest {
         Shape shape1 = getShape(center1);
         Shape shape2 = getShape(center2);
 
+        assertEquals(true, shape1.equals(shape1));
         assertEquals(true, shape1.equals(shape2));
         assertEquals(true, shape2.equals(shape1));
     }
@@ -76,6 +77,7 @@ public class ShapeTest {
         assertEquals(" center: (x = 1.0, y = 2.0)" , getShape(center).toString());
     }
 
+    @Test
     public void cloneTest() {
         Point center = new Point(0.0, 0.0);
         Shape shape = getShape(center);

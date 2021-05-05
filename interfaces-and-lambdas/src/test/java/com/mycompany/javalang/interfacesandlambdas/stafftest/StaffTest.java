@@ -1,4 +1,4 @@
-package om.mycompany.javalang.interfacesandlambdas.staff;
+package com.mycompany.javalang.interfacesandlambdas.staff;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertNotNull;
@@ -6,8 +6,8 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-import om.mycompany.javalang.interfacesandlambdas.measurable.impl.Employee;
-import om.mycompany.javalang.interfacesandlambdas.measurable.Measurable;
+import com.mycompany.javalang.interfacesandlambdas.measurable.impl.Employee;
+import com.mycompany.javalang.interfacesandlambdas.measurable.Measurable;
 
 public class StaffTest {
     @Test

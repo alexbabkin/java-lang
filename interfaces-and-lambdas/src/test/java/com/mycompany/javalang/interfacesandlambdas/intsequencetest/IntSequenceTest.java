@@ -1,4 +1,4 @@
-package om.mycompany.javalang.interfacesandlambdas.intsequence;
+package com.mycompany.javalang.interfacesandlambdas.intsequence;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertEquals;

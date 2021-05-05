@@ -1,6 +1,6 @@
-package om.mycompany.javalang.interfacesandlambdas.measurable.impl;
+package com.mycompany.javalang.interfacesandlambdas.measurable.impl;
 
-import om.mycompany.javalang.interfacesandlambdas.measurable.Measurable;
+import com.mycompany.javalang.interfacesandlambdas.measurable.Measurable;
 
 public class Employee implements Measurable {
     private double salary;

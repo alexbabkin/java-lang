@@ -1,7 +1,7 @@
-package om.mycompany.javalang.interfacesandlambdas.staff;
+package com.mycompany.javalang.interfacesandlambdas.staff;
 
-import om.mycompany.javalang.interfacesandlambdas.measurable.Measurable;
-import om.mycompany.javalang.interfacesandlambdas.measurable.impl.Employee;
+import com.mycompany.javalang.interfacesandlambdas.measurable.Measurable;
+import com.mycompany.javalang.interfacesandlambdas.measurable.impl.Employee;
 import java.util.List;
 import java.util.ArrayList;
 

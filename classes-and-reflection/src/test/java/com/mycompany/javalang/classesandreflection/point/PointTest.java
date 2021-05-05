@@ -53,6 +53,7 @@ public class PointTest {
         assertEquals("Point: x = 1.1, y = 2.2", (new Point(1.1, 2.2)).toString());
     }
 
+    @Test
     public void cloneTest() {
         Point point = new Point(1.0, 2.0);
         Point cloned = null;
