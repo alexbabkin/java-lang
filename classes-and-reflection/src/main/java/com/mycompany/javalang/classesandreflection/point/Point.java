@@ -1,8 +1,6 @@
 package com.mycompany.javalang.classesandreflection.point;
 
-import java.lang.Cloneable;
 import java.util.Objects;
-import java.lang.CloneNotSupportedException;
 
 public class Point implements Cloneable {
     private double x;
@@ -31,7 +29,7 @@ public class Point implements Cloneable {
         return Objects.hash(x, y);
     }
 
-    @Override 
+    @Override
     public boolean equals(Object other) {
         if (other == null) return false;
         if (this == other) return true;

@@ -2,8 +2,8 @@ package com.mycompany.javalang.interfacesandlambdas.staff;
 
 import com.mycompany.javalang.interfacesandlambdas.measurable.Measurable;
 import com.mycompany.javalang.interfacesandlambdas.measurable.impl.Employee;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Staff {
     private List<Measurable> persons;
@@ -21,7 +21,7 @@ public class Staff {
         if (persons.size() == 0) {
             return sum;
         }
-        for(Measurable person : persons) {
+        for (Measurable person : persons) {
             sum += person.getMeasure();
         }
 
@@ -30,7 +30,7 @@ public class Staff {
 
     public Measurable getLargest() {
         Measurable largest = null;
-        for(Measurable person : persons) {
+        for (Measurable person : persons) {
             if (largest == null || person.getMeasure() > largest.getMeasure()) {
                 largest = person;
             }

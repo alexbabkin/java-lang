@@ -1,11 +1,10 @@
 package com.mycompany.javalang.interfacesandlambdas.sorter;
 
 import java.util.ArrayList;
-import java.util.List;
-
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
+import java.util.List;
 
 public class Sorter {
     public static void luckySort(ArrayList<String> strings, Comparator<String> comp) {
@@ -18,7 +17,7 @@ public class Sorter {
         if (strings.isEmpty() || strings.size() == 1) {
             return true;
         }
-    
+
         Iterator<String> iter = strings.iterator();
         String current, previous = iter.next();
         while (iter.hasNext()) {

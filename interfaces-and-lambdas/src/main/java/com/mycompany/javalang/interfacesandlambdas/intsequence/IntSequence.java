@@ -2,8 +2,10 @@ package com.mycompany.javalang.interfacesandlambdas.intsequence;
 
 public interface IntSequence {
     boolean hasNext();
+
     int next();
-    static IntSequence of (int... values) {
+
+    static IntSequence of(int... values) {
         return new IntSequence() {
             private final int[] vals = values;
             private int curIdx = 0;

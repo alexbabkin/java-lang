@@ -5,16 +5,17 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.mycompany.javalang.classesandreflection.point.Point;
-
 import org.junit.Test;
 
 public class LineTest {
     @Test
     public void createLine_NullParametersException() {
-        Throwable exception = assertThrows(IllegalArgumentException.class, () -> new Line(null, new Point(1, 2)));
+        Throwable exception =
+                assertThrows(IllegalArgumentException.class, () -> new Line(null, new Point(1, 2)));
         assertEquals("from and to must not be null", exception.getMessage());
 
-        exception = assertThrows(IllegalArgumentException.class, () -> new Line(new Point(1, 2), null));
+        exception =
+                assertThrows(IllegalArgumentException.class, () -> new Line(new Point(1, 2), null));
         assertEquals("from and to must not be null", exception.getMessage());
     }
 
@@ -100,9 +101,11 @@ public class LineTest {
 
         Line line = new Line(pointFrom, pointTo);
 
-        assertEquals("Line center: (x = 1.5, y = 1.5) from: Point: x = 2.0, y = 1.0; to Point: x = 1.0, y = 2.0", line.toString());
+        assertEquals(
+                "Line center: (x = 1.5, y = 1.5) from: Point: x = 2.0, y = 1.0; to Point: x = 1.0, y = 2.0",
+                line.toString());
     }
-    
+
     @Test
     public void cloneTest() {
         Point pointTo = new Point(1.0, 2.0);
@@ -116,7 +119,7 @@ public class LineTest {
         } catch (CloneNotSupportedException ignored) {
         }
         assertEquals(line, cloned);
-        
+
         line.moveBy(1, 2);
         assertNotEquals(line, cloned);
     }

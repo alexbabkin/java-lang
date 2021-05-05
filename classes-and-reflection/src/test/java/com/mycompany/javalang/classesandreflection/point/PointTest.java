@@ -62,7 +62,7 @@ public class PointTest {
         } catch (CloneNotSupportedException ignored) {
         }
         assertEquals(point, cloned);
-        
+
         point.moveBy(1, 2);
         assertNotEquals(point, cloned);
     }

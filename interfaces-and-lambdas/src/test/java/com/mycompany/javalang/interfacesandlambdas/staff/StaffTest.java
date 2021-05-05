@@ -5,7 +5,6 @@ import static org.junit.Assert.assertNull;
 
 import com.mycompany.javalang.interfacesandlambdas.measurable.Measurable;
 import com.mycompany.javalang.interfacesandlambdas.measurable.impl.Employee;
-
 import org.junit.Test;
 
 public class StaffTest {
@@ -25,7 +24,7 @@ public class StaffTest {
         staff.addPerson(e);
 
         double avg = staff.getAverage();
-        assertEquals(1000.5, avg,  0.0);
+        assertEquals(1000.5, avg, 0.0);
     }
 
     @Test
@@ -38,7 +37,6 @@ public class StaffTest {
         staff.addPerson(e);
         e = new Employee("Person 3", 1000.5);
         staff.addPerson(e);
-
 
         double avg = staff.getAverage();
         assertEquals(1000.5, avg, 0.0);
@@ -55,7 +53,6 @@ public class StaffTest {
         e = new Employee("Person 3", 3000.5);
         staff.addPerson(e);
 
-
         double avg = staff.getAverage();
         assertEquals(2000.5, avg, 0.0);
     }
@@ -71,9 +68,8 @@ public class StaffTest {
         e = new Employee("Person 3", 3000.5);
         staff.addPerson(e);
 
-
         Measurable largest = staff.getLargest();
-        assertEquals("Person 2", ((Employee)largest).getName());
+        assertEquals("Person 2", ((Employee) largest).getName());
     }
 
     @Test

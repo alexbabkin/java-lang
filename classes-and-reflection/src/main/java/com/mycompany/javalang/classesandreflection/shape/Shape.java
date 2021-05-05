@@ -1,8 +1,7 @@
 package com.mycompany.javalang.classesandreflection.shape;
 
-import java.util.Objects;
-
 import com.mycompany.javalang.classesandreflection.point.Point;
+import java.util.Objects;
 
 public abstract class Shape implements Cloneable {
     private Point center;
@@ -41,12 +40,17 @@ public abstract class Shape implements Cloneable {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + " center: (x = " + center.getX() + ", y = " + center.getY() + ")";
+        return getClass().getSimpleName()
+                + " center: (x = "
+                + center.getX()
+                + ", y = "
+                + center.getY()
+                + ")";
     }
 
     @Override
     public Shape clone() throws CloneNotSupportedException {
-        Shape cloned = (Shape)super.clone();
+        Shape cloned = (Shape) super.clone();
         cloned.center = center.clone();
         return cloned;
     }

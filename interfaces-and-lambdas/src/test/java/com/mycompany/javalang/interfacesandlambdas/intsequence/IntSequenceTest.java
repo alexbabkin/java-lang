@@ -1,7 +1,8 @@
 package com.mycompany.javalang.interfacesandlambdas.intsequence;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+
 import org.junit.Test;
 
 public class IntSequenceTest {

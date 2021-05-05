@@ -1,9 +1,8 @@
 package com.mycompany.javalang.interfacesandlambdas.sorter;
 
-import java.util.ArrayList;
-
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
 import org.junit.Test;
 
 public class SorterTest {

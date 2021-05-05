@@ -53,7 +53,11 @@ public class LabeledPointTest {
 
     @Test
     public void toStringTest() {
-        assertEquals("LabeledPoint: x = 1.1, y = 2.2, label = label", (new LabeledPoint("label", 1.1, 2.2)).toString());
-        assertEquals("LabeledPoint: x = 1.1, y = 2.2, label = null", (new LabeledPoint(null, 1.1, 2.2)).toString());
+        assertEquals(
+                "LabeledPoint: x = 1.1, y = 2.2, label = label",
+                (new LabeledPoint("label", 1.1, 2.2)).toString());
+        assertEquals(
+                "LabeledPoint: x = 1.1, y = 2.2, label = null",
+                (new LabeledPoint(null, 1.1, 2.2)).toString());
     }
 }

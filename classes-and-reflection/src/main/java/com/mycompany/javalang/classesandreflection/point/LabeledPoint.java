@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class LabeledPoint extends Point {
     private String label;
-    
+
     public LabeledPoint(String label, double x, double y) {
         super(x, y);
         this.label = label;
@@ -19,11 +19,11 @@ public class LabeledPoint extends Point {
         return Objects.hash(label, super.hashCode());
     }
 
-    @Override 
+    @Override
     public boolean equals(Object other) {
         if (!super.equals(other)) return false;
-        LabeledPoint otherPoint = (LabeledPoint)other;
-        return (label == otherPoint.label);
+        LabeledPoint otherPoint = (LabeledPoint) other;
+        return Objects.equals(label, otherPoint.label);
     }
 
     @Override

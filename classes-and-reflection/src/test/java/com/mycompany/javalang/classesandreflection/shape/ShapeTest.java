@@ -5,7 +5,6 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.mycompany.javalang.classesandreflection.point.Point;
-
 import org.junit.Test;
 
 public class ShapeTest {
@@ -71,7 +70,7 @@ public class ShapeTest {
     @Test
     public void toStringTest() {
         Point center = new Point(1.0, 2.0);
-        assertEquals(" center: (x = 1.0, y = 2.0)" , getShape(center).toString());
+        assertEquals(" center: (x = 1.0, y = 2.0)", getShape(center).toString());
     }
 
     @Test
@@ -84,7 +83,7 @@ public class ShapeTest {
         } catch (CloneNotSupportedException ignored) {
         }
         assertEquals(shape, cloned);
-        
+
         shape.moveBy(1, 2);
         assertNotEquals(shape, cloned);
     }
