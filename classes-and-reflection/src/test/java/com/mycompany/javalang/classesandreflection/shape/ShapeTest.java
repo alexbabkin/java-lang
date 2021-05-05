@@ -1,15 +1,12 @@
 package com.mycompany.javalang.classesandreflection.shape;
 
-import java.lang.Throwable;
-import java.lang.IllegalArgumentException;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.mycompany.javalang.classesandreflection.point.Point;
 
 import org.junit.Test;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.Assert.assertEquals;
-
-
 
 public class ShapeTest {
     private Shape getShape(Point center) {
@@ -24,7 +21,7 @@ public class ShapeTest {
     @Test
     public void createShape_NullCenterException() {
         Throwable exception = assertThrows(IllegalArgumentException.class, () -> getShape(null));
-        assertEquals("Ceneter must not be null", exception.getMessage());
+        assertEquals("Center must not be null", exception.getMessage());
     }
 
     @Test
@@ -53,9 +50,9 @@ public class ShapeTest {
         Shape shape1 = getShape(center1);
         Shape shape2 = getShape(center2);
 
-        assertEquals(true, shape1.equals(shape1));
-        assertEquals(true, shape1.equals(shape2));
-        assertEquals(true, shape2.equals(shape1));
+        assertEquals(shape1, shape1);
+        assertEquals(shape1, shape2);
+        assertEquals(shape2, shape1);
     }
 
     @Test
@@ -66,9 +63,9 @@ public class ShapeTest {
         Shape shape1 = getShape(center1);
         Shape shape2 = getShape(center2);
 
-        assertEquals(false, shape1.equals(null));
-        assertEquals(false, shape2.equals(center1));
-        assertEquals(false, shape1.equals(shape2));
+        assertNotEquals(null, shape1);
+        assertNotEquals(shape2, center1);
+        assertNotEquals(shape1, shape2);
     }
 
     @Test
@@ -84,12 +81,11 @@ public class ShapeTest {
         Shape cloned = null;
         try {
             cloned = shape.clone();
-        } catch (CloneNotSupportedException ex) {
-            ;
+        } catch (CloneNotSupportedException ignored) {
         }
-        assertEquals(true, shape.equals(cloned));
+        assertEquals(shape, cloned);
         
         shape.moveBy(1, 2);
-        assertEquals(false, shape.equals(cloned));
+        assertNotEquals(shape, cloned);
     }
 }

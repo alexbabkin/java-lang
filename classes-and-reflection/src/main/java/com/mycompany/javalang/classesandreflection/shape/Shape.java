@@ -1,10 +1,6 @@
 package com.mycompany.javalang.classesandreflection.shape;
 
 import java.util.Objects;
-import java.lang.Cloneable;
-import java.lang.IllegalArgumentException;
-import java.lang.IllegalArgumentException;
-import java.lang.CloneNotSupportedException;
 
 import com.mycompany.javalang.classesandreflection.point.Point;
 
@@ -15,7 +11,7 @@ public abstract class Shape implements Cloneable {
 
     public Shape(Point center) {
         if (center == null) {
-            throw new IllegalArgumentException("Ceneter must not be null");
+            throw new IllegalArgumentException("Center must not be null");
         }
         this.center = center;
     }

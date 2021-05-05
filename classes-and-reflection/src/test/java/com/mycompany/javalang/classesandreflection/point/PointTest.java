@@ -1,8 +1,8 @@
 package com.mycompany.javalang.classesandreflection.point;
 
-import java.lang.CloneNotSupportedException;
-
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+
 import org.junit.Test;
 
 public class PointTest {
@@ -34,18 +34,18 @@ public class PointTest {
         Point point1 = new Point(1.0, 2.0);
         Point point2 = new Point(1.0, 2.0);
 
-        assertEquals(true, point1.equals(point2));
-        assertEquals(true, point2.equals(point1));
-        assertEquals(true, point1.equals(point1));
+        assertEquals(point1, point2);
+        assertEquals(point2, point1);
+        assertEquals(point1, point1);
     }
 
     @Test
     public void equalsTest_notEquals() {
         Point point1 = new Point(1.0, 2.0);
 
-        assertEquals(false, point1.equals(null));
-        assertEquals(false, point1.equals(new Point(2.0, 2.0)));
-        assertEquals(false, point1.equals(new Point(1.0, 3.0)));
+        assertNotEquals(null, point1);
+        assertNotEquals(point1, new Point(2.0, 2.0));
+        assertNotEquals(point1, new Point(1.0, 3.0));
     }
 
     @Test
@@ -59,12 +59,11 @@ public class PointTest {
         Point cloned = null;
         try {
             cloned = point.clone();
-        } catch (CloneNotSupportedException ex) {
-            ;
+        } catch (CloneNotSupportedException ignored) {
         }
-        assertEquals(true, point.equals(cloned));
+        assertEquals(point, cloned);
         
         point.moveBy(1, 2);
-        assertEquals(false, point.equals(cloned));
+        assertNotEquals(point, cloned);
     }
 }

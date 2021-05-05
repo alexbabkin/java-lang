@@ -1,14 +1,12 @@
 package com.mycompany.javalang.classesandreflection.shape;
 
-import java.lang.Throwable;
-import java.lang.CloneNotSupportedException;
-import java.lang.IllegalArgumentException;
-
-import org.junit.Test;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.mycompany.javalang.classesandreflection.point.Point;
+
+import org.junit.Test;
 
 public class LineTest {
     @Test
@@ -27,7 +25,7 @@ public class LineTest {
 
         Line line = new Line(pointFrom, pointTo);
 
-        assertEquals(true, line.getFrom().equals(pointFrom));
+        assertEquals(line.getFrom(), pointFrom);
     }
 
     @Test
@@ -37,7 +35,7 @@ public class LineTest {
 
         Line line = new Line(pointFrom, pointTo);
 
-        assertEquals(true, line.getTo().equals(pointTo));
+        assertEquals(line.getTo(), pointTo);
     }
 
     @Test
@@ -47,7 +45,7 @@ public class LineTest {
 
         Line line = new Line(pointFrom, pointTo);
 
-        assertEquals(true, line.getCenter().equals(new Point(1.5, 2.5)));
+        assertEquals(line.getCenter(), new Point(1.5, 2.5));
     }
 
     @Test
@@ -62,8 +60,8 @@ public class LineTest {
         Point newPointTo = line.getTo();
         Point newPointFrom = line.getFrom();
 
-        assertEquals(true, newPointTo.equals(new Point(4.0, 7.0)));
-        assertEquals(true, newPointFrom.equals(new Point(5.0, 6.0)));
+        assertEquals(newPointTo, new Point(4.0, 7.0));
+        assertEquals(newPointFrom, new Point(5.0, 6.0));
     }
 
     @Test
@@ -74,9 +72,9 @@ public class LineTest {
         Line line1 = new Line(pointFrom, pointTo);
         Line line2 = new Line(pointFrom, pointTo);
 
-        assertEquals(true, line1.equals(line2));
-        assertEquals(true, line2.equals(line1));
-        assertEquals(true, line1.equals(line1));
+        assertEquals(line1, line2);
+        assertEquals(line2, line1);
+        assertEquals(line1, line1);
     }
 
     @Test
@@ -90,9 +88,9 @@ public class LineTest {
         Line line1 = new Line(pointFrom1, pointTo1);
         Line line2 = new Line(pointFrom2, pointTo2);
 
-        assertEquals(false, line1.equals(null));
-        assertEquals(false, line1.equals(pointTo1));
-        assertEquals(false, line1.equals(line2));
+        assertNotEquals(null, line1);
+        assertNotEquals(line1, pointTo1);
+        assertNotEquals(line1, line2);
     }
 
     @Test
@@ -115,12 +113,11 @@ public class LineTest {
         Line cloned = null;
         try {
             cloned = line.clone();
-        } catch (CloneNotSupportedException ex) {
-            ;
+        } catch (CloneNotSupportedException ignored) {
         }
-        assertEquals(true, line.equals(cloned));
+        assertEquals(line, cloned);
         
         line.moveBy(1, 2);
-        assertEquals(false, line.equals(cloned));
+        assertNotEquals(line, cloned);
     }
 }

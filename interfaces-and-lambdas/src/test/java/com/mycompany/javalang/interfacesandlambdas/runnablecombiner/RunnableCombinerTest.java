@@ -1,10 +1,8 @@
 package com.mycompany.javalang.interfacesandlambdas.runnablecombiner;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertEquals;
-import org.junit.Test;
 
-import java.lang.Runnable;
+import org.junit.Test;
 
 public class RunnableCombinerTest {
     @Test

@@ -1,6 +1,8 @@
 package com.mycompany.javalang.classesandreflection.point;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+
 import org.junit.Test;
 
 public class LabeledPointTest {
@@ -32,21 +34,21 @@ public class LabeledPointTest {
         LabeledPoint labeledPoint3 = new LabeledPoint(null, 1.0, 2.0);
         LabeledPoint labeledPoint4 = new LabeledPoint(null, 1.0, 2.0);
 
-        assertEquals(true, labeledPoint1.equals(labeledPoint1));
-        assertEquals(true, labeledPoint1.equals(labeledPoint2));
-        assertEquals(true, labeledPoint3.equals(labeledPoint4));
+        assertEquals(labeledPoint1, labeledPoint1);
+        assertEquals(labeledPoint1, labeledPoint2);
+        assertEquals(labeledPoint3, labeledPoint4);
     }
 
     @Test
     public void equalsTest_notEquals() {
         LabeledPoint labeledPoint1 = new LabeledPoint("label", 1.0, 2.0);
 
-        assertEquals(false, labeledPoint1.equals(null));
-        assertEquals(false, labeledPoint1.equals(new Point(1.0, 1.0)));
-        assertEquals(false, labeledPoint1.equals(new LabeledPoint("label1", 1.0, 2.0)));
-        assertEquals(false, labeledPoint1.equals(new LabeledPoint("label", 2.0, 2.0)));
-        assertEquals(false, labeledPoint1.equals(new LabeledPoint("label", 1.0, 3.0)));
-        assertEquals(false, labeledPoint1.equals(new LabeledPoint(null, 1.0, 2.0)));
+        assertNotEquals(null, labeledPoint1);
+        assertNotEquals(labeledPoint1, new Point(1.0, 1.0));
+        assertNotEquals(labeledPoint1, new LabeledPoint("label1", 1.0, 2.0));
+        assertNotEquals(labeledPoint1, new LabeledPoint("label", 2.0, 2.0));
+        assertNotEquals(labeledPoint1, new LabeledPoint("label", 1.0, 3.0));
+        assertNotEquals(labeledPoint1, new LabeledPoint(null, 1.0, 2.0));
     }
 
     @Test

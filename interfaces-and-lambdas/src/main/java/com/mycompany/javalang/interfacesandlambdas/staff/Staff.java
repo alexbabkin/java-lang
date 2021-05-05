@@ -9,7 +9,7 @@ public class Staff {
     private List<Measurable> persons;
 
     public Staff() {
-        persons = new ArrayList();
+        persons = new ArrayList<>();
     }
 
     public void addPerson(Employee e) {
