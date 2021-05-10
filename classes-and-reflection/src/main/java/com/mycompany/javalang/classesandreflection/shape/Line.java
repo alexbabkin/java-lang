@@ -3,7 +3,7 @@ package com.mycompany.javalang.classesandreflection.shape;
 import com.mycompany.javalang.classesandreflection.point.Point;
 import java.util.Objects;
 
-public class Line extends Shape implements Cloneable {
+public class Line extends Shape {
     private Point from;
     private Point to;
 

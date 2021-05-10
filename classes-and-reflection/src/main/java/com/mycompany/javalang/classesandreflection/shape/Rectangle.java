@@ -3,7 +3,7 @@ package com.mycompany.javalang.classesandreflection.shape;
 import com.mycompany.javalang.classesandreflection.point.Point;
 import java.util.Objects;
 
-public class Rectangle extends Shape implements Cloneable {
+public class Rectangle extends Shape {
     private Point topLeft;
     private double height;
     private double width;

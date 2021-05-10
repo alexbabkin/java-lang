@@ -3,7 +3,7 @@ package com.mycompany.javalang.classesandreflection.shape;
 import com.mycompany.javalang.classesandreflection.point.Point;
 import java.util.Objects;
 
-public class Circle extends Shape implements Cloneable {
+public class Circle extends Shape {
     private Point center;
     private double radius;
 
