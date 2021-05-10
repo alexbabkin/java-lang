@@ -26,7 +26,7 @@ public class LineTest {
 
         Line line = new Line(pointFrom, pointTo);
 
-        assertEquals(line.getFrom(), pointFrom);
+        assertEquals(pointFrom, line.getFrom());
     }
 
     @Test
@@ -36,7 +36,7 @@ public class LineTest {
 
         Line line = new Line(pointFrom, pointTo);
 
-        assertEquals(line.getTo(), pointTo);
+        assertEquals(pointTo, line.getTo());
     }
 
     @Test
@@ -46,7 +46,7 @@ public class LineTest {
 
         Line line = new Line(pointFrom, pointTo);
 
-        assertEquals(line.getCenter(), new Point(1.5, 2.5));
+        assertEquals(new Point(1.5, 2.5), line.getCenter());
     }
 
     @Test
@@ -102,7 +102,7 @@ public class LineTest {
         Line line = new Line(pointFrom, pointTo);
 
         assertEquals(
-                "Line center: (x = 1.5, y = 1.5) from: Point: x = 2.0, y = 1.0; to Point: x = 1.0, y = 2.0",
+                "Line center: (x = 1.5, y = 1.5); from: Point: x = 2.0, y = 1.0; to Point: x = 1.0, y = 2.0",
                 line.toString());
     }
 

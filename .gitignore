@@ -8,9 +8,13 @@
 *.iml
 *.iws
 
+# vscode
+.vscode/
+
 # Mac
 .DS_Store
 
 # Maven
 log/
 target/
+

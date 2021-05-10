@@ -49,7 +49,7 @@ public class Line extends Shape implements Cloneable {
 
     @Override
     public String toString() {
-        return super.toString() + " from: " + from.toString() + "; to " + to.toString();
+        return super.toString() + "; from: " + from.toString() + "; to " + to.toString();
     }
 
     @Override
