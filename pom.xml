@@ -61,6 +61,7 @@
       <module>lambdas</module>
       <module>classes</module>
       <module>reflection</module>
+      <module>generics</module>
   </modules>
   
 </project>
