@@ -1,4 +1,4 @@
-package com.github.alexbabkin.javalang.lambdas.intsequence;
+package com.github.alexbabkin.javalang.interfaces.intsequence;
 
 public interface IntSequence {
     boolean hasNext();

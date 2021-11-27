@@ -1,4 +1,4 @@
-package com.github.alexbabkin.javalang.lambdas.sorter;
+package com.github.alexbabkin.javalang.interfaces.sorter;
 
 import java.util.ArrayList;
 import java.util.Collections;

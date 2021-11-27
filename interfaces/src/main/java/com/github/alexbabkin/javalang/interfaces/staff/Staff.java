@@ -1,7 +1,7 @@
-package com.github.alexbabkin.javalang.lambdas.staff;
+package com.github.alexbabkin.javalang.interfaces.staff;
 
-import com.github.alexbabkin.javalang.lambdas.measurable.Measurable;
-import com.github.alexbabkin.javalang.lambdas.measurable.impl.Employee;
+import com.github.alexbabkin.javalang.interfaces.measurable.Measurable;
+import com.github.alexbabkin.javalang.interfaces.measurable.impl.Employee;
 import java.util.ArrayList;
 import java.util.List;
 

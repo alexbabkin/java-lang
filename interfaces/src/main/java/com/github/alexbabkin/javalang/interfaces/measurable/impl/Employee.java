@@ -1,6 +1,6 @@
-package com.github.alexbabkin.javalang.lambdas.measurable.impl;
+package com.github.alexbabkin.javalang.interfaces.measurable.impl;
 
-import com.github.alexbabkin.javalang.lambdas.measurable.Measurable;
+import com.github.alexbabkin.javalang.interfaces.measurable.Measurable;
 
 public class Employee implements Measurable {
     private final double salary;

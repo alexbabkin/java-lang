@@ -1,10 +1,10 @@
-package com.github.alexbabkin.javalang.lambdas.staff;
+package com.github.alexbabkin.javalang.interfaces.staff;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-import com.github.alexbabkin.javalang.lambdas.measurable.Measurable;
-import com.github.alexbabkin.javalang.lambdas.measurable.impl.Employee;
+import com.github.alexbabkin.javalang.interfaces.measurable.Measurable;
+import com.github.alexbabkin.javalang.interfaces.measurable.impl.Employee;
 import org.junit.Test;
 
 public class StaffTest {
